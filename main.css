@@ -8,6 +8,8 @@
     --accent-contrast: #18191b;
     --border: #262729;
     --radius: 12px;
+    --proj: #284771;
+
 }
 
 /* Reset & base */
@@ -383,6 +385,44 @@ details[open] summary::after {
     margin-bottom: 1.5rem;
 }
 
+.detail-section.info {
+    background: #1a1b1e;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--proj);
+    margin-bottom: 1.5rem;
+}
+.detail-section.info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--proj);
+    font-family: 'Inter', sans-serif;
+}
+
+.detail-section.info p {
+    color: var(--text-dim);
+    line-height: 1.7;
+}
+
+.detail-section.info ul {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.detail-section.info ul li {
+    padding: 0.5rem 0;
+    color: var(--text-dim);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.detail-section.info ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color:var(--proj);
+}
 .detail-section {
     background: #1a1b1e;
     padding: 1.2rem;
