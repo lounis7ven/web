@@ -1,287 +1,494 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Lounis Cartron - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lounis Cartron — Portfolio</title>
+  <meta name="description" content="Portfolio de Lounis Cartron — BUT Réseaux & Télécommunications." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="bg-blob" aria-hidden="true"></div>
 
-    <nav>
-        <div class="nav-content">
-            <p class="logo">Lounis CARTRON</p>
-            <ul>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#formation">Parcours</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li class="dropdown">
-                    <a href="#projects">Projets</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#project-serre">Serre Automatisée</a></li>
-                        <li><a href="#project-agricole">Travaux Agricoles</a></li>
-                    </ul>
-                </li>
-                <li><a href="#passions">Passions</a></li>
-                <li><a href="#contact" class="btn-contact">Contact</a></li>
-            </ul>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">LC</a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#outils">Outils</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#contact">Me contacter</a>
+        <a class="btn btn--primary" href="./cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="main">
+    <section class="hero container">
+      <div class="reveal">
+        <p class="kicker">BUT Réseaux & Télécommunications</p>
+        <h1 class="hero__title">Lounis <span>CARTRON</span></h1>
+        <p class="hero__subtitle">
+          Réseaux · Systèmes Linux · Télécoms · Bases cybersécurité
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projets">Voir mes projets</a>
+          <a class="btn btn--ghost" href="mailto:lounis.cartron@etu.uca.fr">lounis.cartron@etu.uca.fr</a>
         </div>
-    </nav>
+      </div>
 
-    <header>
-        <div class="hero-content">
-            <h1>Lounis CARTRON</h1> 
-            <h2>Étudiant en BUT Réseaux et Télécommuciations</h2>
-            <img src="pdp.png" alt="Lounis Cartron Photo" class="profile-pic">
+      <div class="hero__grid">
+        <!-- À propos -->
+        <article id="apropos" class="card reveal">
+          <div class="card__head">
+            <h2>À propos</h2>
+            <span class="pill">Clermont-Ferrand</span>
+          </div>
+
+          <div class="about">
+            <img class="about__img" src="./img/lounis.jpg" alt="Photo de Lounis Cartron" />
+            <div class="about__text">
+              <p>
+                Étudiant en BUT R&T, j’aime comprendre une infra, diagnostiquer proprement,
+                remettre un service en fonctionnement et documenter clairement.
+              </p>
+              <ul class="list">
+                <li>Approche méthodique (diagnostic / tests)</li>
+                <li>Rigueur, clarté, esprit d’équipe</li>
+                <li>Objectif : évoluer vers des missions d’ingénierie</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projets (slider) -->
+        <article class="card card--featured reveal" aria-label="Projets mis en avant">
+          <div class="card__head">
+            <h2>Projets</h2>
+            <div class="slider__controls">
+              <button class="iconbtn" type="button" id="prev" aria-label="Projet précédent">‹</button>
+              <button class="iconbtn" type="button" id="next" aria-label="Projet suivant">›</button>
+            </div>
+          </div>
+
+          <div class="slider" role="region" aria-roledescription="carousel" aria-label="Carrousel de projets">
+            <div class="slider__track" id="track">
+              <div class="slide">
+                <div class="slide__media">
+                  <img src="./img/serre.jpg" alt="Projet : Serre automatisée" />
+                </div>
+                <div class="slide__body">
+                  <h3>Serre automatisée</h3>
+                  <p>Arduino + DHT22, pilotage ventilateur, modélisation 3D, tests.</p>
+                  <div class="tags">
+                    <span class="tag">Arduino</span><span class="tag">DHT22</span><span class="tag">SolidWorks</span>
+                  </div>
+                  <div class="mini-actions">
+                    <a class="link" href="#projets">Voir dans la galerie</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide__media">
+                  <img src="./img/reseau.jpg" alt="Projet : Labs réseau" />
+                </div>
+                <div class="slide__body">
+                  <h3>Labs réseau</h3>
+                  <p>VLAN, routage, DHCP/DNS, analyse Wireshark, validation.</p>
+                  <div class="tags">
+                    <span class="tag">VLAN</span><span class="tag">DHCP</span><span class="tag">Wireshark</span>
+                  </div>
+                  <div class="mini-actions">
+                    <a class="link" href="#competences">Voir compétences</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide__media">
+                  <img src="./img/linux.jpg" alt="Projet : Linux / admin" />
+                </div>
+                <div class="slide__body">
+                  <h3>Linux / Admin</h3>
+                  <p>CLI, droits & utilisateurs, scripts simples, bonnes pratiques.</p>
+                  <div class="tags">
+                    <span class="tag">Debian</span><span class="tag">Bash</span><span class="tag">Python</span>
+                  </div>
+                  <div class="mini-actions">
+                    <a class="link" href="#outils">Outils utilisés</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dots" id="dots" aria-label="Pagination du carrousel"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OUTILS / LOGICIELS (cartes + modal) -->
+    <section id="outils" class="section container">
+      <div class="section__head reveal">
+        <h2>Outils & logiciels</h2>
+        <p>Je les utilise en TP / projets (clique pour voir les détails).</p>
+      </div>
+
+      <div class="toolbar reveal">
+        <input id="toolSearch" class="search" type="search" placeholder="Rechercher un outil (ex: Wireshark, Linux, DHCP…)" autocomplete="off" />
+        <div class="chips" role="group" aria-label="Filtres outils">
+          <button class="chip is-active" type="button" data-tool-filter="all">Tous</button>
+          <button class="chip" type="button" data-tool-filter="reseau">Réseau</button>
+          <button class="chip" type="button" data-tool-filter="systeme">Système</button>
+          <button class="chip" type="button" data-tool-filter="telecom">Télécom</button>
+          <button class="chip" type="button" data-tool-filter="sec">Sécurité</button>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">À Propos de moi</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p><strong>J'ai 18 ans et je suis originaire de Clermont-Ferrand.</strong></p>
-                        
-                        <p>Actuellement étudiant en BUT Réseaux et Télécommunications, je m’intéresse particulièrement aux infrastructures réseau, à la cybersécurité et aux services télécoms.</p>
-                        
-                        <p>J’apprends surtout en pratiquant : diagnostiquer une panne, comprendre son origine et remettre un service en fonctionnement sont des tâches qui me motivent. J’ai choisi cette filière pour son approche concrète et professionnalisante.</p>
-                        
-                        <p>Curieux et rigoureux, j’aime analyser un problème en profondeur et communiquer clairement pour faire avancer l’équipe.</p>
-                        
-                        <p>Je recherche une alternance à partir de septembre 2026, avec un rythme d’un mois en entreprise et un mois en formation. Cette expérience me permettrait d’appliquer mes compétences, de contribuer à des projets réseau concrets et de gagner en responsabilités vers des missions d’ingénierie ou d’exploitation réseau.</p>
-                        
-                        <p>Mon objectif après le BUT est d'intégrer une école d'ingénieur.</p>
-                    </div>
-                </div>
+      <div class="tool-grid reveal" id="toolGrid">
+        <!-- Cartes outils (icônes SVG intégrées => pas besoin de télécharger des logos) -->
+        <button class="tool" type="button"
+          data-tags="reseau"
+          data-title="Wireshark"
+          data-subtitle="Analyse de trames / diagnostic"
+          data-body="Capture et analyse de paquets pour comprendre un incident : DNS, DHCP, ARP, TCP/UDP, etc."
+          data-links='[{"label":"Exemple : analyse DNS","href":"#competences"},{"label":"Retour projets","href":"#projets"}]'>
+          <span class="tool__icon" aria-hidden="true">
+            <!-- icône “wave” -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 12c3.5-6 6.5 6 10 0s6.5 6 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M3 7c3.5-6 6.5 6 10 0s6.5 6 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+              <path d="M3 17c3.5-6 6.5 6 10 0s6.5 6 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+            </svg>
+          </span>
+          <span class="tool__meta">
+            <span class="tool__name">Wireshark</span>
+            <span class="tool__desc">Analyse de trames</span>
+          </span>
+          <span class="tool__chev" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="tool" type="button"
+          data-tags="reseau"
+          data-title="Packet Tracer / Labs"
+          data-subtitle="VLAN, routage, services"
+          data-body="Conception et validation de topologies : VLAN, routage statique/dynamique, adressage, services (DHCP/DNS) et tests."
+          data-links='[{"label":"Voir projets réseau","href":"#projets"},{"label":"Compétences réseau","href":"#competences"}]'>
+          <span class="tool__icon" aria-hidden="true">
+            <!-- icône “nodes” -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2" opacity=".25"/>
+              <path d="M7 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="7" cy="7" r="2" fill="currentColor"/>
+              <circle cx="17" cy="7" r="2" fill="currentColor" opacity=".85"/>
+              <circle cx="7" cy="17" r="2" fill="currentColor" opacity=".85"/>
+              <circle cx="17" cy="17" r="2" fill="currentColor" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="tool__meta">
+            <span class="tool__name">Labs réseau</span>
+            <span class="tool__desc">Topologies & services</span>
+          </span>
+          <span class="tool__chev" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="tool" type="button"
+          data-tags="systeme sec"
+          data-title="Linux (Debian)"
+          data-subtitle="CLI, droits, services"
+          data-body="Utilisation quotidienne : CLI, permissions, users/groups, logs, scripts simples et bonnes pratiques d’hygiène."
+          data-links='[{"label":"Voir section compétences","href":"#competences"},{"label":"Contact","href":"#contact"}]'>
+          <span class="tool__icon" aria-hidden="true">
+            <!-- icône “terminal” -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" opacity=".3"/>
+              <path d="M7 10l3 2-3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+            </svg>
+          </span>
+          <span class="tool__meta">
+            <span class="tool__name">Linux (Debian)</span>
+            <span class="tool__desc">Système & scripts</span>
+          </span>
+          <span class="tool__chev" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="tool" type="button"
+          data-tags="systeme"
+          data-title="Virtualisation"
+          data-subtitle="Machines virtuelles / tests"
+          data-body="Environnements isolés pour tester des configs, reproduire un incident, valider une solution sans impacter le principal."
+          data-links='[{"label":"Voir projets","href":"#projets"}]'>
+          <span class="tool__icon" aria-hidden="true">
+            <!-- icône “layers” -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l9 5-9 5-9-5 9-5Z" stroke="currentColor" stroke-width="2" opacity=".35"/>
+              <path d="M21 12l-9 5-9-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M21 16l-9 5-9-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="tool__meta">
+            <span class="tool__name">Virtualisation</span>
+            <span class="tool__desc">Tests & isolation</span>
+          </span>
+          <span class="tool__chev" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="tool" type="button"
+          data-tags="telecom"
+          data-title="Câblage / Télécom"
+          data-subtitle="RJ45, fibre, mesures"
+          data-body="Bases : câblage structuré, jarretières, initiation fibre, repères sur signaux et contrôles."
+          data-links='[{"label":"Compétences télécom","href":"#competences"}]'>
+          <span class="tool__icon" aria-hidden="true">
+            <!-- icône “plug” -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 7v6m6-6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 13h10v2a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5v-2Z" stroke="currentColor" stroke-width="2" opacity=".8"/>
+              <path d="M12 20v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="tool__meta">
+            <span class="tool__name">Télécom</span>
+            <span class="tool__desc">Câblage & fibre</span>
+          </span>
+          <span class="tool__chev" aria-hidden="true">↗</span>
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <dialog class="modal" id="toolModal" aria-label="Détails de l’outil">
+        <div class="modal__head">
+          <div>
+            <p class="modal__kicker" id="mSubtitle"></p>
+            <h3 class="modal__title" id="mTitle"></h3>
+          </div>
+          <button class="iconbtn" type="button" id="mClose" aria-label="Fermer">×</button>
+        </div>
+
+        <p class="modal__body" id="mBody"></p>
+        <div class="modal__links" id="mLinks"></div>
+      </dialog>
+    </section>
+
+    <!-- Compétences “vivantes” (menus déroulants) -->
+    <section id="competences" class="section container">
+      <div class="section__head reveal">
+        <h2>Compétences</h2>
+        <p>Ce que je sais faire (déroule pour voir le détail).</p>
+      </div>
+
+      <div class="accordion-grid reveal">
+        <details class="acc" open>
+          <summary>
+            <span class="acc__title">Réseaux</span>
+            <span class="acc__hint">VLAN · routage · services</span>
+          </summary>
+          <ul>
+            <li>Adressage IP, sous-réseaux, tests de connectivité</li>
+            <li>VLAN / segmentation, routage, mise en place et validation</li>
+            <li>DHCP/DNS : compréhension, vérifications, dépannage</li>
+            <li>Analyse de trames (Wireshark) : hypothèses → preuves</li>
+          </ul>
+          <div class="acc__actions">
+            <a class="btn btn--ghost" href="#outils">Voir les outils</a>
+            <a class="btn btn--primary" href="#projets">Voir les projets</a>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <span class="acc__title">Systèmes (Linux)</span>
+            <span class="acc__hint">CLI · droits · logs</span>
+          </summary>
+          <ul>
+            <li>CLI Linux, arborescence, permissions, users/groups</li>
+            <li>Services, logs, diagnostic simple et documentation</li>
+            <li>Scripts Bash/Python (automatisation légère)</li>
+          </ul>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <span class="acc__title">Sécurité (bases)</span>
+            <span class="acc__hint">hygiène · durcissement</span>
+          </summary>
+          <ul>
+            <li>Bonnes pratiques : mots de passe, droits, mises à jour</li>
+            <li>Réflexes : minimiser l’exposition, principe du moindre privilège</li>
+            <li>Comprendre “comment ça casse” pour mieux prévenir</li>
+          </ul>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <span class="acc__title">Télécoms</span>
+            <span class="acc__hint">RJ45 · fibre · mesures</span>
+          </summary>
+          <ul>
+            <li>Câblage RJ45, repérage, contrôles</li>
+            <li>Initiation fibre optique</li>
+            <li>Notions de signaux et vérifications de base</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- PROJETS (recherche + tags + cartes) -->
+    <section id="projets" class="section container">
+      <div class="section__head reveal">
+        <h2>Projets</h2>
+        <p>Recherche + filtres pour naviguer rapidement.</p>
+      </div>
+
+      <div class="toolbar reveal">
+        <input id="projectSearch" class="search" type="search" placeholder="Rechercher un projet (ex: VLAN, Arduino, Linux…)" autocomplete="off" />
+        <div class="chips" role="group" aria-label="Filtres projets">
+          <button class="chip is-active" type="button" data-project-filter="all">Tous</button>
+          <button class="chip" type="button" data-project-filter="reseau">Réseau</button>
+          <button class="chip" type="button" data-project-filter="systeme">Système</button>
+          <button class="chip" type="button" data-project-filter="iot">IoT</button>
+          <button class="chip" type="button" data-project-filter="telecom">Télécom</button>
+        </div>
+      </div>
+
+      <div class="project-grid reveal" id="projectGrid">
+        <article class="pcard" data-tags="iot systeme" data-title="Serre automatisée">
+          <div class="pcard__media">
+            <img src="./img/serre.jpg" alt="Serre automatisée" />
+          </div>
+          <div class="pcard__body">
+            <h3>Serre automatisée</h3>
+            <p>Arduino + DHT22, régulation, tests, modélisation 3D.</p>
+            <div class="tags">
+              <span class="tag">Arduino</span><span class="tag">DHT22</span><span class="tag">SolidWorks</span>
             </div>
-        </section>
-
-        <section id="formation" class="bg-light">
-            <div class="container">
-                <h2 class="section-title">Mon Parcours</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="date">Sept 2025 - Présent</div>
-                        <div class="content">
-                            <h3>BUT Réseaux et Télécommunications</h3>
-                            <p>IUT Clermont Auvergne - Site d'Aubière</p>
-                            <p>Pourquoi ce choix</p>
-                            <p><small>J’ai choisi le BUT Réseaux & Télécommunications parce que j’aime comprendre comment les systèmes communiquent entre eux, et je veux développer des compétences concrètes et recherchées dans un domaine en constante évolution. </small></p>
-                            <p><small>Apprentissage des protocoles, administrateur système et sécurité.</small></p>
-                            <img src="iut.webp" alt="IUT Aubière" class="formation-img">
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="date">2022 - 2025</div>
-                        <div class="content">
-                            <h3>Baccalauréat Général</h3>
-                            <p>Lycée Godefroy de Bouillon - Clermont-Ferrand</p>
-                            <p><small>Spécialités : Mathématiques et Physique-Chimie</small></p>
-                            <img src="lycée.webp" alt="Lycée Clermont" class="formation-img">
-                        </div>
-                    </div>
-                </div>
+            <div class="pcard__actions">
+              <button class="btn btn--ghost pMore" type="button"
+                data-title="Serre automatisée"
+                data-subtitle="IoT / automatisation"
+                data-body="Objectif : mesurer la température/humidité et piloter un ventilateur selon des seuils. Travail sur capteurs, logique de contrôle, tests et validation."
+                data-links='[{"label":"Retour haut","href":"#top"},{"label":"Contact","href":"#contact"}]'>Détails</button>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <section id="competences">
-            <div class="container">
-                <h2 class="section-title">Compétences & Qualités</h2>
-                
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3>Administration Réseaux</h3>
-                        <p class="skill-detail"><strong>Configuration :</strong> Mise en place de points d'accès Wi-Fi, VLANs, routage (Cisco Packet Tracer).</p>
-                        <p class="skill-detail"><strong>Administration :</strong> Services DHCP/DNS.</p>
-                        <p class="skill-detail"><strong>Logiciels :</strong> Cisco Packet Tracer (simulation), Wireshark (analyse de trames), VMWare.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Télécommunications</h3>
-                        <p class="skill-detail"><strong>Supports de Trans. :</strong> Câblage structuré (cuivre/RJ45), réalisation de jarretières et introduction à la fibre optique.</p>
-                        <p class="skill-detail"><strong>Signal :</strong> Analyse de signaux basiques (fréquence, amplitude, bande passante) et conversion analogique/numérique.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Système & Web</h3>
-                        <p class="skill-detail"><strong>Linux (Debian) :</strong> Navigation en ligne de commande (CLI), gestion des droits (chmod) des utilisateurs.</p>
-                        <p class="skill-detail"><strong>Web :</strong> Création de sites statiques structurés (HTML) et mise en page responsive (CSS), comme ce portfolio.</p>
-                        <p class="skill-detail"><strong>Programmation :</strong> Scripts d'automatisation simples en Python.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Qualités</h3>
-                        <p class="skill-detail"><strong>Rigueur :</strong> Méthodique dans les diagnostics de pannes (approche OSI).</p>
-                        <p class="skill-detail"><strong>Curiosité :</strong> Veille technologique constante sur les nouvelles failles de sécurité.</p>
-                        <p class="skill-detail"><strong>Esprit d'équipe :</strong> Communication claire pour la résolution d'incidents.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Langues</h3>
-                        <ul class="lang-list">
-                            <li>
-                                <span>Anglais</span>
-                                <span class="level">Niveau B1+</span>
-                            </li>
-                            <li>
-                                <span>Espagnol</span>
-                                <span class="level">Niveau C1</span>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
+        <article class="pcard" data-tags="reseau" data-title="Topologies VLAN / routage">
+          <div class="pcard__media">
+            <img src="./img/reseau.jpg" alt="Labs réseau" />
+          </div>
+          <div class="pcard__body">
+            <h3>Topologies VLAN / routage</h3>
+            <p>Segmentation, adressage, tests, vérification bout-en-bout.</p>
+            <div class="tags">
+              <span class="tag">VLAN</span><span class="tag">Routing</span><span class="tag">Tests</span>
             </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Projets & Expériences</h2>
-                
-                <article class="project-card" id="project-serre">
-                    <details class="project-details">
-                        <summary>
-                            <img src="serre.jpg" alt="Serre">
-                            <div class="summary-title-wrapper">
-                                <span class="title">Conception d'une Serre Automatisée</span>
-                                <span class="badge">1ère Générale - SI</span>
-                            </div>
-                        </summary>
-                        <div class="project-content-inner">
-                            <div class="detail-section">
-                                <h4>Objectif</h4>
-                                <p>Créer un système capable de réguler automatiquement la température d'une serre miniature pour maintenir des conditions optimales de croissance des plantes.</p>
-                            
-                            </div>
-                            <div class="detail-section info">
-                                <h4>Contexte</h4>
-                                <p>Projet de fin de semestre de 12h en équipe de 3 étudiants (Mini-projet SI). Ce projet combine électronique, programmation et modélisation 3D.</p>
-                            
-                            
-                            
-                                <h4>Planification</h4>
-                                <ul>
-                                    <li><strong>Semaine 1-2 :</strong> Recherche et conception du système de régulation</li>
-                                    <li><strong>Semaine 3 :</strong> Modélisation 3D des supports sur SolidWorks</li>
-                                    <li><strong>Semaine 4 :</strong> Programmation Arduino et assemblage</li>
-                                </ul>
-                            
-                            
-                            
-                                <h4>Conception</h4>
-                                <ul>
-                                    <li><strong>Programmation :</strong> Développement d'un algorithme sur carte Arduino (Si Temp > 25°C alors activer le ventilateur)</li>
-                                    <li><strong>Modélisation :</strong> Conception des pièces supports en 3D sur SolidWorks</li>
-                                    <li><strong>Électronique :</strong> Intégration du capteur de température DHT22 et du module relais</li>
-                                </ul>
-                            
-                                <h4>Tests et Ajustements</h4>
-                                <ul>
-                                    <li>Calibration du capteur de température pour une précision de ±0.5°C</li>
-                                    <li>Ajustement des seuils de déclenchement du ventilateur</li>
-                                    <li>Tests de durabilité sur 48h en conditions réelles</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="detail-section results">
-                                <h4>Résultats</h4>
-                                <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
-                                    <div style="flex: 1; min-width: 250px;">
-                                        <p>Prototype fonctionnel capable de maintenir la température entre 18°C et 24°C avec une précision remarquable. Le système a démontré sa fiabilité lors de tests prolongés et a reçu une excellente évaluation de notre professeur.</p>
-                                    </div>
-                                    <div style="flex: 0 0 200px;">
-                                        <img src="solidworks.jpg" alt="Résultat Serre" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-                </article>
+            <div class="pcard__actions">
+              <button class="btn btn--ghost pMore" type="button"
+                data-title="Topologies VLAN / routage"
+                data-subtitle="Réseau"
+                data-body="Mise en place de VLAN, adressage, routage et validation avec une démarche de tests (ping, traceroute, services)."
+                data-links='[{"label":"Voir outils","href":"#outils"}]'>Détails</button>
             </div>
-        </section>
-        
-        <section id="project-agricole">
-            <div class="container">
-                <article class="project-card">
-                    <details class="project-details">
-                        <summary>
-                            <img src="mais.jpg" alt="Maïs">
-                            <div class="summary-title-wrapper">
-                                <span class="title">Assistant Travaux Agricoles</span>
-                                <span class="badge">Job d'été 2024</span>
-                            </div>
-                        </summary>
-                        <div class="project-content-inner">
-                            <div class="detail-section info">
-                                <h4>Missions Quotidiennes</h4>
-                                <ul>
-                                    <li><strong>Matin (6h–12h) :</strong> Inspection des parcelles et contrôle qualité.</li>
-                                    <li><strong>Après-midi (14h–18h) :</strong> Travaux d'entretien et maintenance du matériel.</li>
-                                    <li><strong>Reporting :</strong> Documentation quotidienne des observations et détection de maladies.</li>
-                                </ul>
-                                <h4>Compétences Développées</h4>
-                                <p>Cette expérience m'a permis de renforcer ma rigueur et mon endurance. Le travail en équipe sous des délais stricts de récolte demande une communication claire et une grande réactivité.</p>
-                            </div>
+          </div>
+        </article>
 
-                            <div class="detail-section results">
-                                <h4>Résultats & Impact</h4>
-                                <p>Mission accomplie avec succès. Reconnaissance par l'exploitant pour la qualité du travail fourni et la précision du suivi des parcelles de maïs.</p>
-                            </div>
-                        </div>
-                    </details>
-                </article>
+        <article class="pcard" data-tags="systeme" data-title="Linux / scripts">
+          <div class="pcard__media">
+            <img src="./img/linux.jpg" alt="Linux / terminal" />
+          </div>
+          <div class="pcard__body">
+            <h3>Linux / scripts</h3>
+            <p>CLI, droits, users/groups, scripts simples et logs.</p>
+            <div class="tags">
+              <span class="tag">Debian</span><span class="tag">Bash</span><span class="tag">Python</span>
             </div>
-        </section>
-
-        <section id="passions">
-            <div class="container">
-                <h2 class="section-title">Mes Passions</h2>
-                <div class="passion-grid">
-                    <article class="passion-card">
-                        <div class="passion-image">
-                            <img src="salle muscu.webp" alt="Salle de sport">
-                        </div>
-                        <div class="passion-content">
-                            <h3>Musculation & Fitness</h3>
-                            <p>Passionné de musculation depuis 2 ans, je m'entraîne régulièrement 4 à 5 fois par semaine. La salle de sport m'apporte discipline, dépassement de soi et gestion du stress.</p>
-                            <p>Cette pratique développe ma rigueur, ma persévérance et ma capacité à me fixer des objectifs à long terme - des qualités que je transpose dans mes études et projets professionnels.</p>
-                        </div>
-                    </article>
-                </div>
+            <div class="pcard__actions">
+              <button class="btn btn--ghost pMore" type="button"
+                data-title="Linux / scripts"
+                data-subtitle="Système"
+                data-body="Organisation d’un environnement Linux propre, gestion des droits et scripts simples pour automatiser des tâches."
+                data-links='[{"label":"Contact","href":"#contact"}]'>Détails</button>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <section id="cv">
-            <div class="container text-center">
-                <h2 class="section-title">Mon CV</h2>
-                <div class="cv-place-holder">
-                    <img src="image cv.jpg" alt="CV Lounis Cartron" width="75%" />
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="cv.pdf" download="LOUNIS CARTRON CV.pdf" class="btn-primary">Télécharger mon CV</a>
-                </div>
+        <article class="pcard" data-tags="telecom" data-title="Câblage / télécom">
+          <div class="pcard__media">
+            <img src="./img/telecom.jpg" alt="Câblage / télécom" />
+          </div>
+          <div class="pcard__body">
+            <h3>Câblage / télécom</h3>
+            <p>RJ45, initiation fibre, repérage et vérifications.</p>
+            <div class="tags">
+              <span class="tag">RJ45</span><span class="tag">Fibre</span><span class="tag">Mesures</span>
             </div>
-        </section>
-
-        <section id="contact">
-            <div class="container text-center">
-                <h2 class="section-title">Me Contacter</h2>
-                <p>Si mon profil vous intéresse, veuillez me contacter par mail sur l'adresse : </p>
-                <a href="mailto:lounis.cartron@etu.uca.fr"><strong>lounis.cartron@etu.uca.fr</strong></a> 
+            <div class="pcard__actions">
+              <button class="btn btn--ghost pMore" type="button"
+                data-title="Câblage / télécom"
+                data-subtitle="Télécom"
+                data-body="Réalisation/contrôle de câbles RJ45, initiation fibre, et contrôles de base."
+                data-links='[{"label":"Outils","href":"#outils"}]'>Détails</button>
             </div>
-        </section>
-    </main>
+          </div>
+        </article>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 Lounis Cartron.</p>
+      <!-- Modal projets (réutilise le même dialog) -->
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="section__head reveal">
+        <h2>Contact</h2>
+        <p>Mail direct + lien portfolio.</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <div>
+          <h3>Écrire</h3>
+          <p>lounis.cartron@etu.uca.fr</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="mailto:lounis.cartron@etu.uca.fr">Envoyer un mail</a>
+          <a class="btn btn--ghost" href="https://louniscartron.netlify.app/" target="_blank" rel="noopener">Ouvrir le portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <p>© 2025–2026 Lounis Cartron</p>
     </footer>
+  </main>
 
+  <!-- Modal réutilisé pour projets aussi -->
+  <dialog class="modal" id="projectModal" aria-label="Détails du projet">
+    <div class="modal__head">
+      <div>
+        <p class="modal__kicker" id="pmSubtitle"></p>
+        <h3 class="modal__title" id="pmTitle"></h3>
+      </div>
+      <button class="iconbtn" type="button" id="pmClose" aria-label="Fermer">×</button>
+    </div>
+
+    <p class="modal__body" id="pmBody"></p>
+    <div class="modal__links" id="pmLinks"></div>
+  </dialog>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
