@@ -391,3 +391,21 @@ body{
   .slider__track{transition:none;}
   .pcard, .tool, .btn{transition:none;}
 }
+
+.backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(11,18,32,.35);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+body.no-scroll{ overflow: hidden; }
+
+/* Fallback si <dialog>.showModal() n’existe pas */
+.modal.fallback-open{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
