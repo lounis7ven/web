@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lounis Cartron - Portfolio</title>
+  <meta name="description" content="Portfolio de Lounis Cartron — BUT Réseaux & Télécommunications.">
+  <link rel="stylesheet" href="main.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <div class="bg-blob" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
+
+  <nav class="site-nav">
+    <div class="nav-content">
+      <p class="logo">Lounis <span>CARTRON</span></p>
+
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#about">À Propos</a></li>
+        <li><a href="#formation">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+
+        <li class="dropdown">
+          <div class="dropdown-head">
+            <a class="dropdown-link" href="#projects">Projets</a>
+            <button class="dropdown-toggle" type="button" aria-label="Ouvrir le sous-menu Projets" aria-expanded="false">
+              <span aria-hidden="true">▾</span>
+            </button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="#project-1">Portfolio</a></li>
+            <li><a href="#project-2">Python</a></li>
+            <li><a href="#project-3">RLAN</a></li>
+            <li><a href="#project-4"></a></li>
+          </ul>
+        </li>
+
+        <li><a href="#passions">Passions</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact" class="btn-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="kicker">BUT Réseaux & Télécommunications</p>
+        <h1>Lounis <span>CARTRON</span></h1>
+        <h2>Réseaux · Systèmes · Télécoms · Bases cybersécurité</h2>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects">Voir mes projets</a>
+          <a class="btn-ghost" href="#cv">Voir mon CV</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="img/pdp.png" alt="Photo de Lounis Cartron" class="profile-pic">
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2 class="section-title">À Propos de moi</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p><strong>J'ai 18 ans et je suis originaire de Clermont-Ferrand.</strong></p>
+
+            <p>Actuellement étudiant en BUT Réseaux et Télécommunications, je m’intéresse particulièrement aux infrastructures réseau, à la cybersécurité et aux services télécoms.</p>
+
+            <p>J’apprends surtout en pratiquant : diagnostiquer une panne, comprendre son origine et remettre un service en fonctionnement sont des tâches qui me motivent. J’ai choisi cette filière pour son approche concrète et professionnalisante.</p>
+
+            <p>Curieux et rigoureux, j’aime analyser un problème en profondeur et communiquer clairement pour faire avancer l’équipe.</p>
+
+            <p>Je recherche une alternance à partir de septembre 2026, avec un rythme d’un mois en entreprise et un mois en formation. Cette expérience me permettrait d’appliquer mes compétences, de contribuer à des projets réseau concrets et de gagner en responsabilités vers des missions d’ingénierie ou d’exploitation réseau.</p>
+
+            <p>Mon objectif après le BUT est d'intégrer une école d'ingénieur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formation" class="bg-light reveal">
+      <div class="container">
+        <h2 class="section-title">Mon Parcours</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">Sept 2025 - Présent</div>
+            <div class="content">
+              <h3>BUT Réseaux et Télécommunications</h3>
+              <p>IUT Clermont Auvergne - Site d'Aubière</p>
+              <p>Pourquoi ce choix</p>
+              <p><small>J’ai choisi le BUT Réseaux & Télécommunications parce que j’aime comprendre comment les systèmes communiquent entre eux, et je veux développer des compétences concrètes et recherchées dans un domaine en constante évolution.</small></p>
+              <p><small>Apprentissage des protocoles, administration système et sécurité.</small></p>
+              <img src="img/iut.webp" alt="IUT Aubière" class="formation-img">
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="date">2022 - 2025</div>
+            <div class="content">
+              <h3>Baccalauréat Général</h3>
+              <p>Lycée Godefroy de Bouillon - Clermont-Ferrand</p>
+              <p><small>Spécialités : Mathématiques et Physique-Chimie</small></p>
+              <img src="img/lycée.webp" alt="Lycée Clermont" class="formation-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Compétences & Qualités</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Administration Réseaux</h3>
+            <p class="skill-detail"><strong>Configuration :</strong> Mise en place de points d'accès Wi‑Fi, VLANs, routage.</p>
+            <p class="skill-detail"><strong>Administration :</strong> Services DHCP/DNS.</p>
+            <p class="skill-detail"><strong>Logiciels :</strong> Cisco Packet Tracer, Wireshark, virtualisation.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Télécommunications</h3>
+            <p class="skill-detail"><strong>Supports :</strong> Câblage structuré (cuivre/RJ45), jarretières, introduction à la fibre.</p>
+            <p class="skill-detail"><strong>Signal :</strong> Notions de fréquence, amplitude, bande passante, conversions.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Système & Web</h3>
+            <p class="skill-detail"><strong>Linux :</strong> CLI, gestion des droits, utilisateurs.</p>
+            <p class="skill-detail"><strong>Web :</strong> HTML/CSS responsive (ce portfolio).</p>
+            <p class="skill-detail"><strong>Programmation :</strong> Scripts simples en Python.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Qualités</h3>
+            <p class="skill-detail"><strong>Rigueur :</strong> Méthodique dans les diagnostics (approche OSI).</p>
+            <p class="skill-detail"><strong>Curiosité :</strong> Veille technologique.</p>
+            <p class="skill-detail"><strong>Esprit d'équipe :</strong> Communication claire pour la résolution d'incidents.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Langues</h3>
+            <ul class="lang-list">
+              <li><span>Anglais</span><span class="level">Niveau B1+</span></li>
+              <li><span>Espagnol</span><span class="level">Niveau C1</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Projets</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJET 1 -->
+          <article class="project-card" id="project-1">
+            <details class="project-details">
+              <summary>
+                <img src="img/Projet1.png" alt="Image projet 1">
+                <div class="summary-title-wrapper" >
+                  <span class="title">Portfolio (SAE1.04)</span>
+                  <span class="badge">Catégorie</span>
+                </div>
+
+                <div class="tool-badges" aria-label="Logiciels utilisés (à ajuster)">
+                  <span class="tool-badge tool-badge--img" title="HTML">
+                    <img src="img/html.webp" alt="HTML">
+                  <span>HTML</span>
+                  </span>
+                  <span class="tool-badge tool-badge--img"  title="CSS">
+                    <img src="img/css.webp" alt="CSS">
+                    <span>CSS</span>
+                  </span>
+                  <span class="tool-badge tool-badge--img" title="JavaScript">
+                    <img src="img/js.webp" alt="JavaScript">
+                    <span>JavaScript</span>
+                  </span>
+                </div>
+              </summary>
+
+              <div class="project-content-inner">
+                <div class="detail-section">
+                  <h4>Objectif</h4>
+                  
+                  <p>Créer un portfolio professionnel en HTML/CSS/JS.</p>
+                 
+                </div>
+
+               <div class="detail-section info">
+                  <h4>Contexte</h4>
+                  
+                    <p>Dans le cadre de ma formation en BUT Réseaux & Télécommunications, j'ai réalisé un portfolio personnel pour présenter mes compétences et projets.</p>
+                    <p>L'objectif était de concevoir un site web responsive et professionnel en utilisant HTML, CSS et JavaScript.</p>
+                    <p>Ce projet m'a permis de développer mes compétences en développement web tout en créant un outil de présentation efficace.</p>
+                  
+                <div class="detail-section info">
+                  <h4>Étapes</h4>
+                  <ul>
+                    <li><span>
+                      Planification du contenu et de la structure du site.
+                    </span></li>
+                    <li><span>
+                      Développement du site en HTML/CSS avec des fonctionnalités JavaScript.
+                    </span></li>
+                    <li>
+                      Tests et ajustements pour assurer la compatibilité et la réactivité.
+                    </span></li>
+                  </ul>
+                </div>
+                  
+                <div class="detail-section info">
+                  <h4>Ce que j’ai fait</h4>
+                  <ul>
+                    <li><span>
+                      Conception et développement complet du site web.
+                    </span></li>
+                    <li><span>
+                      Intégration de fonctionnalités interactives avec JavaScript.
+                    </span></li>
+                    <li>
+                      Optimisation pour une expérience utilisateur fluide.
+                    </span></li>
+                  </ul>
+                </div>
+
+                <div class="detail-section results">
+                  <h4>Résultats</h4>
+                  <div class="results-grid">
+                    <div class="placeholder-lines" aria-hidden="true">
+                      <p>Le portfolio est désormais en ligne et sert de vitrine professionnelle.</p>
+                    
+                      <p>Il a reçu des retours positifs pour son design et sa fonctionnalité.</p>
+
+                      <p>Ce projet a renforcé mes compétences en développement web et m'a permis de créer un outil précieux pour ma carrière.</p>
+                    </div>
+                    <div class="results-media">
+                      <img src="img/Projet1Rés.png" alt="Illustration projet 1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- PROJET 2 -->
+          <article class="project-card" id="project-2">
+            <details class="project-details">
+              <summary>
+                <img src="img/RLAN.png" alt="Image projet 2">
+                <div class="summary-title-wrapper">
+                  <span class="title">Mise en place d'un réseau local (RLAN)</span>
+                  <span class="badge">Catégorie</span>
+                </div>
+
+                <div class="tool-badges" aria-label="Logiciels utilisés (à ajuster)">
+                  <span class="tool-badge" data-ico="Sw" title="Switchs">Switchs</span>
+                  <span class="tool-badge" data-ico="Rt" title="Routeurs">Routeurs</span>
+                  <span class="tool-badge" data-ico=".pkt" title="Cisco">Cisco</span>
+                </div>
+              </summary>
+
+              <div class="project-content-inner">
+                <div class="detail-section">
+                  <h4>Objectif</h4>
+                  <div class="placeholder-lines" aria-hidden="true">
+                    <p>Concevoir et déployer un réseau local fonctionnel.</p>
+                    <p>Développer un réseau local sécurisé et performant.</p>
+                  </div>
+                </div>
+
+                <div class="detail-section info">
+                  <h4>Contexte</h4>
+                  
+                    <p>Dans le cadre de ma formation en BUT Réseaux & Télécommunications, j'ai participé à un projet de mise en place d'un réseau local (RLAN) pour une petite entreprise.</p>
+
+                    <p>L'objectif était de concevoir un réseau fiable, sécurisé et adapté aux besoins de l'entreprise.</p>
+                  
+
+                <div class="detail-section info">
+                  <h4>Étapes</h4>
+                  <ul>
+                    <li>
+                      Analyse des besoins et conception du réseau.
+                    </li>
+                    <li>
+                      Configuration des équipements réseau (switchs, routeurs).
+                    </li>
+                    <li>
+                      Tests de performance et mise en place des mesures de sécurité.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="detail-section info">
+                  <h4>Ce que j’ai fait</h4>
+                  <ul>
+                    <li>
+                      Configuration des VLANs et routage inter-VLAN.
+                    </li>
+                    <li>
+                      Mise en place des services DHCP et DNS.
+                    </li>
+                    <li>
+                      Implémentation des règles de sécurité et tests de vulnérabilité.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="detail-section results">
+                  <h4>Résultats</h4>
+                  <div class="results-grid">
+                    <div class="placeholder-lines" aria-hidden="true">
+                      <p>Le réseau local a été déployé avec succès, répondant aux besoins de l'entreprise.</p>
+
+                      <p>Il a amélioré la communication interne et la sécurité des données.</p>
+
+                      <p>Le projet a renforcé mes compétences en administration réseau et en sécurité informatique.</p>
+                    </div>
+                    <div class="results-media">
+                      <img src="img/project-2.jpg" alt="Illustration projet 2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- PROJET 3 -->
+          <article class="project-card" id="project-3">
+            <details class="project-details">
+              <summary>
+                <img src="img/sae15.png" alt="Image projet 3">
+                <div class="summary-title-wrapper">
+                  <span class="title">Programme Python (SAE1.05)</span>
+                  <span class="badge">Catégorie</span>
+                </div>
+
+                <div class="tool-badges" aria-label="Logiciels utilisés (à ajuster)">
+                  <span class="tool-badge" data-ico="Py" title="Python">Python</span>
+                  <span class="tool-badge" data-ico="DOC" title="Documentation">Doc</span>
+                </div>
+              </summary>
+
+              <div class="project-content-inner">
+                <div class="detail-section">
+                  <h4>Objectif</h4>
+                  <div class="placeholder-lines" aria-hidden="true">
+                    <p>Développer un programme Python pour automatiser une tâche spécifique.</p>
+                  </div>
+                </div>
+
+                <div class="detail-section info">
+                  <h4>Contexte</h4>
+                  <div class="placeholder-lines" aria-hidden="true"></div>
+                    <p>Dans le cadre de ma formation en BUT Réseaux & Télécommunications, j'ai réalisé un projet de développement d'un programme en Python.</p>
+                    <p>L'objectif était de créer un outil automatisant le calcul du nombre d'heures de travail par groupe d'enseignements (TD, TP, CM).</p>
+                    <p>Ce projet m'a permis de renforcer mes compétences en programmation et en automatisation de tâches.</p>
+                  </div>
+
+                <div class="detail-section info">
+                  <h4>Étapes</h4>
+                  <ul>
+                    <li>
+                      Analyse des besoins et définition des fonctionnalités du programme.
+                    </li>
+                      Développement du code en Python et utilisation de la bibliothèque Pandas pour l'exctraction de données d'un fhichier .csv
+                    </li>
+                    <li>
+                      Tests et validation du programme pour assurer son bon fonctionnement.
+                    </li>
+                  </ul>
+                </div>  
+                  
+                <div class="detail-section info">
+                  <h4>Ce que j’ai fait</h4>
+                  <ul>
+                    <li>
+                      Rédaction du cahier des charges et planification du projet.
+                    </li>
+                    <li>
+                      Écriture du code Python et implémentation des fonctionnalités.
+                    </li>
+                    <li>
+                      Rédaction de la documentation utilisateur et technique.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="detail-section results">
+                  <h4>Résultats</h4>
+                  <div class="results-grid">
+                    <div class="placeholder-lines" aria-hidden="true">
+                      <p>Le programme Python a été développé avec succès, automatisant efficacement le calcul des heures de travail.</p>
+                      
+                      <p>Il a été bien accueilli pour sa simplicité d'utilisation et son efficacité.</p>
+                      
+                      <p>Ce projet a renforcé mes compétences en programmation Python et en gestion de projet.</p>
+                    
+                    </div>
+                    <div class="results-media">
+                      <img src="img/SAE15.png" alt="Illustration projet 3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <!-- PROJET 4 -->
+          <article class="project-card" id="project-4">
+            <details class="project-details">
+              <summary>
+                <img src="img/project-4.jpg" alt="Image projet 4">
+                <div class="summary-title-wrapper">
+                  <span class="title">Projet 4 — Titre</span>
+                  <span class="badge">Catégorie</span>
+                </div>
+
+                <div class="tool-badges" aria-label="Logiciels utilisés (à ajuster)">
+                  <span class="tool-badge" data-ico="SEC" title="Sécurité">Sécurité</span>
+                  <span class="tool-badge" data-ico="LX" title="Linux">Linux</span>
+                  <span class="tool-badge" data-ico="PY" title="Python">Python</span>
+                </div>
+              </summary>
+
+              <div class="project-content-inner">
+                <div class="detail-section">
+                  <h4>Objectif</h4>
+                  <div class="placeholder-lines" aria-hidden="true"><span></span><span class="short"></span></div>
+                </div>
+
+                <div class="detail-section info">
+                  <h4>Contexte</h4>
+                  <div class="placeholder-lines" aria-hidden="true"><span></span><span></span><span class="short"></span></div>
+
+                  <h4>Étapes</h4>
+                  <ul class="placeholder-list" aria-hidden="true">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span class="short"></span></li>
+                  </ul>
+
+                  <h4>Ce que j’ai fait</h4>
+                  <ul class="placeholder-list" aria-hidden="true">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span class="short"></span></li>
+                  </ul>
+                </div>
+
+                <div class="detail-section results">
+                  <h4>Résultats</h4>
+                  <div class="results-grid">
+                    <div class="placeholder-lines" aria-hidden="true"><span></span><span></span><span class="short"></span></div>
+                    <div class="results-media">
+                      <img src="img/project-4.jpg" alt="Illustration projet 4">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="passions" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Mes Passions</h2>
+
+        <div class="passion-grid">
+          <article class="passion-card">
+            <div class="passion-image">
+              <img src="img/salle muscu.webp" alt="Salle de sport">
+            </div>
+            <div class="passion-content">
+              <h3>Musculation & Fitness</h3>
+              <p>Passionné de musculation depuis 2 ans, je m'entraîne régulièrement 4 à 5 fois par semaine. La salle de sport m'apporte discipline, dépassement de soi et gestion du stress.</p>
+              <p>Cette pratique développe ma rigueur, ma persévérance et ma capacité à me fixer des objectifs à long terme - des qualités que je transpose dans mes études et projets professionnels.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="reveal">
+      <div class="container text-center">
+        <h2 class="section-title">Mon CV</h2>
+
+        <div class="cv-place-holder">
+          <img src="img/image cv.jpg" alt="CV Lounis Cartron">
+        </div>
+
+        <div class="cv-actions">
+          <a href="cv.pdf" download="LOUNIS CARTRON CV.pdf" class="btn-primary">Télécharger mon CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="container text-center">
+        <h2 class="section-title">Me Contacter</h2>
+        <p>Si mon profil vous intéresse, veuillez me contacter par mail sur l'adresse :</p>
+        <a class="contact-mail" href="mailto:lounis.cartron@etu.uca.fr"><strong>lounis.cartron@etu.uca.fr</strong></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Lounis Cartron.</p>
+  </footer>
+
+</body>
+</html>
