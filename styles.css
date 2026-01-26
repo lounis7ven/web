@@ -382,30 +382,8 @@ body{
 .footer{padding:24px 0 40px;color:var(--muted);}
 
 /* Reveal */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease, transform .55s ease;}
-.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal{opacity:1;transform:none;}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease, transform .55s ease;}
+.js .reveal.is-visible{opacity:1;transform:none;}
 
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto;}
-  .reveal{transition:none;transform:none;opacity:1;}
-  .slider__track{transition:none;}
-  .pcard, .tool, .btn{transition:none;}
-}
 
-.backdrop{
-  position: fixed;
-  inset: 0;
-  background: rgba(11,18,32,.35);
-  backdrop-filter: blur(4px);
-  z-index: 999;
-}
-body.no-scroll{ overflow: hidden; }
-
-/* Fallback si <dialog>.showModal() n’existe pas */
-.modal.fallback-open{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
