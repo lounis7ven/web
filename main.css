@@ -359,7 +359,7 @@ strong{font-weight:800}
   .hero-media{justify-items:start}
 }
 .profile-pic{
-  width:min(260px, 100%);
+  width:min(200px, 100%);
   aspect-ratio:1/1;
   object-fit:fill;
   border-radius:120px;
