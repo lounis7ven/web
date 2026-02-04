@@ -361,7 +361,7 @@ strong{font-weight:800}
 .profile-pic{
   width:min(260px, 100%);
   aspect-ratio:1/1;
-  object-fit:fill;
+  object-fit:cover;
   border-radius:120px;
   border:1px solid var(--line);
   background:var(--bg-soft);
